@@ -1,0 +1,73 @@
+.auth-container {
+  width: 300px;
+  background-color: #f7fafb;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 150px);
+  border-radius: 10px;
+}
+.auth-container .auth_tabs .sign-tab {
+  position: relative;
+  float: left;
+  width: 110px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  line-height: 14px;
+  border-bottom: 2px solid #999;
+}
+.auth-container .auth_tabs .sign-tab a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #999;
+}
+.auth-container .auth_tabs .sign-tab.active {
+  border-bottom: 2px solid #ff8383;
+}
+.auth-container .auth_tabs .sign-tab.active a {
+  color: #ff8383;
+}
+.auth-container .login-form input {
+  position: relative;
+  float: left;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #b0bec5;
+  outline: none;
+  margin: 5%;
+  padding: 10px 0px;
+  height: 5px;
+  background-color: transparent;
+}
+.auth-container .login-form input.wrong {
+  border: 1px solid #f00;
+}
+.auth-container .login-form input.wrong {
+  border: 1px solid #f00;
+}
+.auth-container .login-form a {
+  position: relative;
+  margin-top: 0px;
+  margin-left: 33%;
+  text-decoration: none;
+  color: #999;
+  float: left;
+}
+.auth-container .login-form button {
+  width: 120px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #ff7783;
+  box-shadow: 0px 2px 20px 2px #fbb8bf;
+  position: relative;
+  float: left;
+  border: none;
+  margin-left: 90px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 15px 30px;
+  color: #fff;
+  outline: none;
+}
