@@ -139,7 +139,7 @@ class Registration extends Component {
            <InputMask
             type="text"
             id="dateAdded"
-            mask="9999.99.99"
+            mask="9999-99-99"
             placeholder="DATE ADDED"
             onChange={this.handleChange}
           />
