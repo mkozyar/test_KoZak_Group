@@ -2,7 +2,7 @@
   width: 300px;
   background-color: #f7fafb;
   position: absolute;
-  top: calc(50% - 250px);
+  top: calc(50% - 450px);
   left: calc(50% - 150px);
   border-radius: 10px;
 }
@@ -28,7 +28,7 @@
 .auth-container .auth_tabs .sign-tab.active a {
   color: #ff8383;
 }
-.auth-container .login-form input {
+.auth-container .login-form input, .auth-container .login-form select {
   position: relative;
   float: left;
   width: 90%;
@@ -39,6 +39,12 @@
   padding: 10px 0px;
   height: 5px;
   background-color: transparent;
+}
+.auth-container .login-form select{
+  height: 50px;
+  text-transform: uppercase;
+  margin-top: -10px;
+  color: #9b9c9c;
 }
 .auth-container .login-form input.wrong {
   border: 1px solid #f00;

@@ -15,25 +15,21 @@ const baseHref = base ? base.getAttribute("href") : "/";
 class App extends Component {
   constructor() {
     super();
-    this.state = { message: '' };
+    this.state = {isloggedIn: localStorage.getItem('user')};
   }
 
-  componentDidMount() {
-    // fetch('/api/message')
-    //   .then(response => response.json())
-    //   .then(json => this.setState({ message: json }));
-  }
 
   render() {
     return (
       <BrowserRouter basename={baseHref.replace(/\/$/, "")}>
       <DelegateMarkdownLinks>
-        <Switch>
-          <Route path="/" exact={true} component={Table} />
+        
+          {this.state.isloggedIn? (<Switch><Route path="/" exact={true} component={Table} />
           <Route path="/table" component={Table} />
           <Route path="/login" component={Login} />
+          <Route path="/registration" component={Registration} /></Switch>):(<Switch><Route path="/login" component={Login} />
           <Route path="/registration" component={Registration} />
-        </Switch>
+          <Route path="*" component={Login} /></Switch>)}
       </DelegateMarkdownLinks>
     </BrowserRouter>
     );

@@ -32,7 +32,7 @@ table th {
     cursor: pointer;
 }
 .sorting img {
-    width: 7px;
+    width: 13px;
 }
 .sorting{
     display: grid;
@@ -51,7 +51,28 @@ table td {
 table td input{
     width: 100%;
 }
+table td img{
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+}
 
+.actions {
+   display: flex;
+   justify-content: space-around;
+}
+.logout{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logout img{
+    width: 25px;
+    margin-left: 10px;
+}
 table th+th,table td+td,table th+td {
     border-left: 1px solid #ddd; 
 }

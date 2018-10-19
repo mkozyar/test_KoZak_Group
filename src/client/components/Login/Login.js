@@ -47,7 +47,11 @@ class Login extends Component {
         }
         return res
      
-      }).then(function (res) {
+      }).then(function(res){
+        localStorage.setItem('user', this.state.login);
+      }.bind(this))
+      .then(function (res) {
+        
        this.props.history.push("/table")
       }.bind(this))
       .catch(function(err) {

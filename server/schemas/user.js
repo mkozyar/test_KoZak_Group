@@ -7,10 +7,15 @@ var userSchema = new mongoose.Schema({
     email: { type: String, unique: true, required: true },
     password: { type: String },
     login: { type: String, required: true, unique: true, index: true },
+    fName: String,
+    lName: String,
     position: String,
     male: String,
     salary: Number,
-    dateAdded: Date,
+    dateAdded: {
+        type: Date,
+        default: Date.now()
+    },
     phoneNumber: String
 
    

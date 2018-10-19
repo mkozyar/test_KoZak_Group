@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import cryptojs from "crypto-js";
 import "./Registration.css";
+import InputMask from "react-input-mask";
 
 class Registration extends Component {
   constructor(props) {
@@ -12,6 +13,13 @@ class Registration extends Component {
       password: "",
       confirmPass: "",
       email: "",
+      fName: "",
+        lName: "",
+        male: "",
+        phoneNumber: "",
+        salary: "",
+        position: "",
+        dateAdded: "",
     };
     this.handChange = this.handleChange.bind(this);
     this.register = this.register.bind(this);
@@ -46,6 +54,13 @@ class Registration extends Component {
       body: JSON.stringify({
         login: this.state.login,
         email: this.state.email,
+        fName: this.state.fName,
+        lName: this.state.lName,
+        male: this.state.male,
+        phoneNumber: this.state.phoneNumber,
+        salary: this.state.salary,
+        position: this.state.position,
+        dateAdded: this.state.dateAdded,
         password: hashedPass
       })
     };
@@ -89,6 +104,49 @@ class Registration extends Component {
             placeholder="EMAIL"
             onChange={this.handleChange}
           />
+          
+           <input
+            type="text"
+            id="fName"
+            placeholder="FIRST NAME"
+            onChange={this.handleChange}
+          />
+           <input
+            type="text"
+            id="lName"
+            placeholder="LAST NAME"
+            onChange={this.handleChange}
+          />
+           <InputMask
+            type="text"
+            id="phoneNumber"
+            mask="+99 (999) 999-99-99"
+            placeholder="PHONE NUMBER"
+            onChange={this.handleChange}
+          />
+           <input
+            type="text"
+            id="salary"
+            placeholder="SALARY"
+            onChange={this.handleChange}
+          />
+           <input
+            type="text"
+            id="position"
+            placeholder="POSITION"
+            onChange={this.handleChange}
+          />
+           <InputMask
+            type="text"
+            id="dateAdded"
+            mask="9999.99.99"
+            placeholder="DATE ADDED"
+            onChange={this.handleChange}
+          />
+           <select  id="male" placeholder="DATE ADDED" onChange={this.handleChange} >
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
           <input
             type="password"
             id="password"
